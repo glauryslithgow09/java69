@@ -1,0 +1,81 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Confirma los términos y condiciones?:
+    <input type="checkbox" id="checkbox1" name="checkbox1">
+
+    </br>
+
+    <input type="button" value="Enviar" id="Enviar" onClick="" style="display:none;">
+    <script>
+        addEventListener('DOMContentLoaded', inicio, false);
+
+        function inicio() {
+            document.getElementById('checkbox1').addEventListener('change', cambiocheckbox, false);
+        }
+
+        function cambiocheckbox() {
+            if (document.getElementById('checkbox1').checked) {
+                document.getElementById('Enviar').style.display = "block";
+            } else {
+                document.getElementById('Enviar').style.display = "none";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>glaurys</title>
+    <meta charset="UTF-8">
+</head>
+
+<body style="background-color: rgb(180, 202, 178);">
+
+    <input type="text" id="text1" name="text1" size="10">
+    <br>
+    <input type="text" id="tex2" name="text2" size="10">
+
+    <script>
+        addEventListener('DOMContentLoaded', inicio, false);
+
+        function inicio() {
+            document.getElementById('text1').addEventListener('focus', tomarfoco1, false);
+            document.getElementById('text2').addEventListener('focus', tomarfoco2, false);
+            document.getElementById('text1').addEventListener('blur', perderfoco1, false);
+            document.getElementById('text2').addEventListener('blur', perderfoco2, false);
+        }
+
+        function tomarfoco1() {
+            document.getElementById('text1').style.color = 'rgb(0, 60, 255)';
+        }
+
+        function tomarfoco2() {
+            document.getElementById('text2').style.color = 'rgb(0, 60, 255)';
+        }
+
+        function perderfoco1() {
+            document.getElementById('text1').style.color = 'rgb(45, 197, 31)';
+        }
+
+        function perderfoco2() {
+            document.getElementById('text2').style.color = 'rgb(45, 197, 31)';
+        }
+    </script>
+
+</body>
+
+</html>
